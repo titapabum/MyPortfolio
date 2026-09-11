@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titapa Bumrungna - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e293b',
+                        secondary: '#475569',
+                        accent: '#2563eb',
+                        bglight: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['"IBM Plex Sans Thai Looped"', 'sans-serif'],
+                        kanit: ['"Kanit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="lang-en bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 text-primary font-sans antialiased selection:bg-accent selection:text-white relative overflow-x-hidden">
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-indigo-400/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/70 backdrop-blur-lg border-b border-white/50 shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-xl font-bold tracking-wider text-primary">PORTFOLIO</a>
+
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#about" class="text-sm font-semibold text-secondary hover:text-accent transition">
+                            <span class="en">About</span><span class="th">เกี่ยวกับ</span>
+                        </a>
+                        <a href="#education" class="text-sm font-semibold text-secondary hover:text-accent transition">
+                            <span class="en">Education</span><span class="th">การศึกษา</span>
+                        </a>
+                        <a href="#skills" class="text-sm font-semibold text-secondary hover:text-accent transition">
+                            <span class="en">Skills</span><span class="th">ทักษะ</span>
+                        </a>
+                        <a href="#projects" class="text-sm font-semibold text-secondary hover:text-accent transition">
+                            <span class="en">Projects</span><span class="th">ผลงาน</span>
+                        </a>
+                    </div>
+                    <button onclick="toggleLang()" class="flex items-center gap-1.5 bg-white/80 hover:bg-white border border-slate-200 text-slate-700 px-3 py-1.5 rounded-full transition-all shadow-sm hover:shadow hover:scale-105 active:scale-95 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-accent group-hover:rotate-180 transition-transform duration-500">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                        <span id="langLabel" class="text-xs font-bold tracking-wider">TH</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 min-h-[85vh]">
+        <div class="w-full md:w-2/5 flex justify-center" data-aos="zoom-in-right" data-aos-duration="1000">
+            <div class="relative group">
+                <div class="absolute inset-0 bg-accent rounded-full blur-xl opacity-30 group-hover:opacity-50 transition duration-500 translate-y-2"></div>
+                <img src="profile.jpg" alt="Titapa Bumrungna" class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white/80 shadow-2xl group-hover:-translate-y-2 transition-transform duration-500">
+            </div>
+        </div>
+
+        <div class="w-full md:w-3/5 text-center md:text-left" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <h2 class="text-accent font-semibold tracking-wide uppercase text-sm mb-2">
+                <span class="en">School of Information Technology, Sripatum University</span>
+                <span class="th">คณะเทคโนโลยีสารสนเทศ มหาวิทยาลัยศรีปทุม</span>
+            </h2>
+            <h1 class="en text-4xl md:text-5xl font-bold mb-4 text-primary">Titapa Bumrungna</h1>
+            <h1 class="th text-4xl md:text-5xl font-bold mb-4 text-primary">ฐิตาภา บำรุงนา</h1>
+
+            <p class="text-lg text-secondary mb-4 leading-relaxed max-w-2xl">
+                <span class="en">Final-year Computer Science and Software Development Innovation student. I blend a strong foundation in Full Stack Development with a passion for <span class="font-semibold text-accent">Data Analytics</span> and <span class="font-semibold text-accent">System Architecture</span></span>
+                <span class="th">นักศึกษาชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์ สนใจทั้งเทคโนโลยี ข้อมูล และการสร้างสรรค์คอนเทนต์ มีพื้นฐานด้าน Full Stack Development ผสมผสานกับความหลงใหลในด้าน <span class="font-semibold text-accent">Data Analytics</span> และ <span class="font-semibold text-accent">System Architecture</span></span>
+            </p>
+
+            <div class="mt-6 flex flex-col gap-4 items-center md:items-start">
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                    <span class="px-3 py-1 bg-white/80 border border-slate-200/80 rounded-lg text-xs font-medium text-slate-700 shadow-sm hover:border-accent hover:text-accent transition-all">C# ASP.NET</span>
+                    <span class="px-3 py-1 bg-white/80 border border-slate-200/80 rounded-lg text-xs font-medium text-slate-700 shadow-sm hover:border-accent hover:text-accent transition-all">PostgreSQL</span>
+                    <span class="px-3 py-1 bg-white/80 border border-slate-200/80 rounded-lg text-xs font-medium text-slate-700 shadow-sm hover:border-accent hover:text-accent transition-all">RAG & AI</span>
+                    <span class="px-3 py-1 bg-white/80 border border-slate-200/80 rounded-lg text-xs font-medium text-slate-700 shadow-sm hover:border-accent hover:text-accent transition-all">Data Analytics</span>
+                    <span class="px-3 py-1 bg-white/80 border border-slate-200/80 rounded-lg text-xs font-medium text-slate-700 shadow-sm hover:border-accent hover:text-accent transition-all">UI/UX Design</span>
+                </div>
+
+                <div class="flex items-center gap-3 pt-1">
+                    <a href="https://github.com/titapabum" target="_blank" rel="noopener noreferrer" title="GitHub" class="p-2.5 bg-white/80 hover:bg-white text-slate-700 hover:text-accent border border-slate-200/80 rounded-full shadow-sm hover:shadow hover:-translate-y-0.5 transition-all">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/titapa-bumrungna-85322b436/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="p-2.5 bg-white/80 hover:bg-white text-slate-700 hover:text-accent border border-slate-200/80 rounded-full shadow-sm hover:shadow hover:-translate-y-0.5 transition-all">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    </a>
+                    <a href="mailto:titapaabum@gmail.com" title="Email" class="p-2.5 bg-white/80 hover:bg-white text-slate-700 hover:text-accent border border-slate-200/80 rounded-full shadow-sm hover:shadow hover:-translate-y-0.5 transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section id="education" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="zoom-in">
+                <h2 class="text-3xl font-bold text-primary mb-2">
+                    <span class="en">Education</span><span class="th">ประวัติการศึกษา</span>
+                </h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded"></div>
+            </div>
+
+            <div class="relative border-l-4 border-blue-200/50 ml-4 md:ml-8">
+                <!-- University -->
+                <div class="mb-12 ml-8 md:ml-12 relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -left-[41px] md:-left-[57px] top-1 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-all duration-300"></div>
+                    <div class="p-6 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/50 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <h3 class="text-xl font-bold text-primary">
+                                <span class="en">Sripatum University</span><span class="th">มหาวิทยาลัยศรีปทุม</span>
+                            </h3>
+                            <span class="text-sm font-bold text-accent bg-blue-100/50 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">
+                                <span class="en">2023 - Present</span><span class="th">2566 - ปัจจุบัน</span>
+                            </span>
+                        </div>
+                        <p class="text-secondary font-medium mb-3">
+                            <span class="en">Bachelor of Science (B.S.) in Computer Science and Software Development Innovation</span>
+                            <span class="th">ปริญญาตรี วิทยาศาสตรบัณฑิต (ว.ท.บ.) วิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="mb-12 ml-8 md:ml-12 relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -left-[41px] md:-left-[57px] top-1 w-6 h-6 bg-blue-300 rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-all duration-300"></div>
+                    <div class="p-6 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/50 shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <h3 class="text-xl font-bold text-primary">
+                                <span class="en">Sarasas Witaed Suksa School</span><span class="th">โรงเรียนสารสาสน์วิเทศศึกษา</span>
+                            </h3>
+                            <span class="text-sm font-bold text-secondary bg-slate-100 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">
+                                <span class="en">2020 - 2023</span><span class="th">2563 - 2566</span>
+                            </span>
+                        </div>
+                        <p class="text-secondary font-medium mb-3">
+                            <span class="en">English - Computer Program</span><span class="th">แผนการเรียน ศิลป์ - คอมพิวเตอร์</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-down">
+                <h2 class="text-3xl font-bold text-primary mb-2">
+                    <span class="en">Skills & Tools</span><span class="th">ทักษะและเครื่องมือ</span>
+                </h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Skill 1 -->
+                <div class="p-6 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/50 shadow-lg hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/80 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center mb-4 group-hover:text-accent transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Data Analytics</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        <span class="en">Data Analysis, SQL, Vector Search, Embeddings, and RAG systems.</span>
+                        <span class="th">วิเคราะห์ข้อมูล, SQL, Vector Search, Embeddings และระบบ RAG</span>
+                    </p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="p-6 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/50 shadow-lg hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/80 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center mb-4 group-hover:text-accent transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">UI/UX Design</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        <span class="en">Figma, Prototype Design, User Flow, Wireframing, and Content Creation.</span>
+                        <span class="th">Figma, ออกแบบ Prototype, User Flow, Wireframing และ Content Creation</span>
+                    </p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="p-6 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/50 shadow-lg hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/80 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center mb-4 group-hover:text-accent transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">System Analyst</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        <span class="en">Business Logic, Diagramming (Draw.io/Mermaid), System Architecture Design.</span>
+                        <span class="th">Business Logic, ออกแบบ Diagram (Draw.io/Mermaid), ออกแบบ System Architecture</span>
+                    </p>
+                </div>
+                <!-- Skill 4 -->
+                <div class="p-6 bg-white/60 backdrop-blur-lg rounded-2xl border border-white/50 shadow-lg hover:-translate-y-3 hover:scale-105 hover:shadow-2xl hover:bg-white/80 transition-all duration-300 group cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center mb-4 group-hover:text-accent transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Development</h3>
+                    <p class="text-sm text-secondary leading-relaxed">
+                        C# ASP.NET Core MVC, HTML/CSS, JavaScript, PostgreSQL, Git & GitHub.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="zoom-in">
+                <h2 class="text-3xl font-bold text-primary mb-2">
+                    <span class="en">Project Experience</span><span class="th">ประสบการณ์พัฒนาผลงาน</span>
+                </h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded"></div>
+                <p class="mt-4 text-secondary text-sm">
+                    <span class="en">Click on any project to view details and case study.</span>
+                    <span class="th">คลิกที่ผลงานเพื่อดูรายละเอียดและขั้นตอนการพัฒนา</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div onclick="openModal('mindi')" class="bg-white/70 backdrop-blur-lg rounded-3xl p-8 border border-white shadow-lg hover:-translate-y-4 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer group relative overflow-hidden" data-aos="flip-left" data-aos-delay="100">
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-accent">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-primary group-hover:text-accent transition-colors">MinDi AI Relationship Advisor (RAG)</h3>
+                    <p class="text-sm font-medium text-accent mb-4">AI & Data Project</p>
+                    <p class="text-sm text-secondary mb-6 leading-relaxed line-clamp-3">
+                        <span class="en">Developed a relationship advisory chatbot leveraging RAG technology to connect research knowledge bases with LLMs for improved response accuracy.</span>
+                        <span class="th">พัฒนาแชทบอทให้คำปรึกษาด้านความสัมพันธ์โดยใช้เทคโนโลยี RAG เชื่อมโยงฐานความรู้จากงานวิจัยเข้ากับ LLM ช่วยเพิ่มความแม่นยำในการตอบคำถาม</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full">RAG</span>
+                        <span class="px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full">LLM</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div onclick="openModal('stationary')" class="bg-white/70 backdrop-blur-lg rounded-3xl p-8 border border-white shadow-lg hover:-translate-y-4 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer group relative overflow-hidden" data-aos="flip-left" data-aos-delay="200">
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-accent">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-primary group-hover:text-accent transition-colors">Stationary E-Commerce Web Application</h3>
+                    <p class="text-sm font-medium text-accent mb-4">C# ASP.NET Core MVC</p>
+                    <p class="text-sm text-secondary mb-6 leading-relaxed line-clamp-3">
+                        <span class="en">Independently developed a comprehensive e-commerce web application using C#, ASP.NET Core MVC, and Entity Framework Core from start to finish.</span>
+                        <span class="th">พัฒนาเว็บแอปพลิเคชัน E-Commerce แบบครบวงจรด้วย C# ASP.NET Core MVC และ Entity Framework Core โดยรับผิดชอบการพัฒนาด้วยตนเองทั้งหมดตั้งแต่ต้นจนจบ</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full">C# MVC</span>
+                        <span class="px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full">Full-Stack</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div onclick="openModal('petshop')" class="bg-white/70 backdrop-blur-lg rounded-3xl p-8 border border-white shadow-lg hover:-translate-y-4 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer group relative overflow-hidden" data-aos="flip-left" data-aos-delay="300">
+                    <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-accent">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-primary group-hover:text-accent transition-colors">Pet Shop E-Commerce Platform</h3>
+                    <p class="text-sm font-medium text-accent mb-4">Web Development & System Architecture Project</p>
+                    <p class="text-sm text-secondary mb-6 leading-relaxed line-clamp-3">
+                        <span class="en">Designed system architecture and developed a full-stack e-commerce web application with backend database structures and APIs.</span>
+                        <span class="th">ออกแบบสถาปัตยกรรมระบบไอทีและพัฒนา Full Stack E-Commerce Web Application ครอบคลุมการวางโครงสร้างฐานข้อมูล Backend และการออกแบบ API</span>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full">Architecture</span>
+                        <span class="px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full">API Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal (Pop-up with Horizontal Gallery Slider) -->
+    <div id="projectModal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+
+        <div class="flex items-center justify-center min-h-screen p-4 pointer-events-none">
+            <div class="bg-white/95 backdrop-blur-xl w-full max-w-3xl rounded-3xl shadow-2xl pointer-events-auto transform transition-all relative flex flex-col max-h-[90vh]">
+
+                <button onclick="closeModal()" class="absolute top-5 right-5 z-20 text-slate-400 hover:text-primary transition-colors bg-white/80 backdrop-blur-md hover:bg-slate-100 rounded-full p-2 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <!-- Scrollable Content Container -->
+                <div class="p-6 md:p-8 overflow-y-auto custom-scrollbar">
+                    <p id="modalCategory" class="text-xs font-bold text-accent mb-1 tracking-wider uppercase"></p>
+                    <h2 id="modalTitle" class="text-2xl md:text-3xl font-extrabold text-primary mb-3"></h2>
+
+                    <div id="modalTags" class="flex flex-wrap gap-2 mb-6 pb-4 border-b border-slate-100"></div>
+
+                    <!-- Horizontal Image Banner Slider -->
+                    <div class="mb-6">
+                        <div class="text-xs font-semibold text-slate-400 mb-2 flex justify-between items-center"></div>
+                        <div id="modalGallery" class="flex gap-4 overflow-x-auto snap-x snap-mandatory rounded-2xl pb-3 custom-scrollbar"></div>
+                    </div>
+
+                    <!-- เนื้อหาจะถูกแทรกผ่าน JS -->
+                    <div id="modalMarkdown" class="prose prose-slate prose-headings:text-primary prose-a:text-accent max-w-none text-secondary text-sm md:text-base leading-relaxed space-y-4"></div>
+                </div>
+
+                <!-- Footer / Action Button -->
+                <div class="p-5 md:p-6 border-t border-slate-100 bg-slate-50/50 rounded-b-3xl flex justify-between items-center">
+                    <a id="modalLink" href="https://github.com/VarakornSPU/Mindi" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-full font-medium hover:bg-accent hover:-translate-y-0.5 transition-all shadow-md text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        <span>View on GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">
+                <span class="en">Let's Connect</span><span class="th">ติดต่อฉัน</span>
+            </h2>
+            <p class="text-slate-400 text-sm mb-8">
+                <span class="en">Looking for a Co-op Internship Opportunity as Data Analyst, UX/UI, or System Analyst.</span><span class="th">กำลังมองหาโอกาสฝึกงานในตำแหน่ง Data Analyst, UX/UI หรือ System Analyst</span>
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="mailto:titapaabum@gmail.com" class="text-slate-400 hover:text-white hover:-translate-y-1 transition-all">titapaabum@gmail.com</a>
+                <a href="https://www.linkedin.com/in/titapa-bumrungna-85322b436/" target="_blank" class="text-slate-400 hover:text-white hover:-translate-y-1 transition-all">LinkedIn</a>
+                <a href="https://github.com/titapabum" target="_blank" class="text-slate-400 hover:text-white hover:-translate-y-1 transition-all">GitHub</a>
+            </div>
+            <p class="text-xs text-slate-500">Built with HTML & Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+            mirror: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-in-out-cubic',
+        });
+
+        // ฟังก์ชันสลับภาษา
+        function toggleLang() {
+            const body = document.body;
+            const langLabel = document.getElementById('langLabel');
+
+            if (body.classList.contains('lang-en')) {
+                body.classList.replace('lang-en', 'lang-th');
+                langLabel.textContent = 'EN';
+            } else {
+                body.classList.replace('lang-th', 'lang-en');
+                langLabel.textContent = 'TH';
+            }
+        }
+
+        const projectsData = {
+            'mindi': {
+                title: 'MindI AI Advisor',
+                category: 'AI & Data Project',
+                tags: ['RAG', 'Qwen LLM', 'Python', 'JSON', 'Vector Search'],
+                link: 'https://github.com/VarakornSPU/Mindi',  
+                content: `
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Challenge</span><span class="th">ความท้าทาย</span></h3>
+            <p><span class="en">Developing a reliable relationship advisory chatbot that delivers accurate, research-backed responses. The primary obstacles were preventing AI hallucinations and strictly controlling the model to avoid generating unwanted cross-lingual outputs (e.g., default Chinese responses from the base open-weights model).</span><span class="th">การพัฒนาแชทบอทให้คำปรึกษาด้านความสัมพันธ์ที่ตอบคำถามได้อย่างแม่นยำและอ้างอิงจากงานวิจัยจริง โดยต้องแก้ปัญหาหลักคือการป้องกัน AI ตอบเนื้อหาที่ไม่เป็นความจริง (Hallucination) และควบคุมโมเดลไม่ให้แสดงผลลัพธ์เป็นภาษาอื่นที่ไม่ต้องการ (เช่น ภาษาจีนจาก Base Model)</span></p>
+            
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Solution</span><span class="th">การแก้ปัญหา</span></h3>
+            <p><span class="en">Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline using Python. Processed and structured research data via JSON for optimized Vector Search. Integrated the Qwen LLM with heavily engineered system prompts and strict language guardrails to ensure response accuracy, contextual relevance, and language consistency.</span><span class="th">ออกแบบและพัฒนาระบบ RAG (Retrieval-Augmented Generation) โดยใช้ Python ในการจัดเตรียมข้อมูลและโครงสร้าง JSON เพื่อดึงข้อมูลเชิงความหมายผ่าน Vector Search อย่างมีประสิทธิภาพ เชื่อมต่อกับ Qwen LLM พร้อมออกแบบ Prompt Engineering และ Language Guardrails อย่างรัดกุมเพื่อบังคับทิศทางคำตอบให้ถูกต้องและสอดคล้องกับงานวิจัย</span></p>
+
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Key Features</span><span class="th">จุดเด่นของระบบ</span></h3>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><span class="en">Automated data processing pipeline for unstructured research text.</span><span class="th">ระบบประมวลผลข้อความจากงานวิจัยเพื่อนำมาใช้ในฐานข้อมูล</span></li>
+                <li><span class="en">Semantic search integration for high-precision context retrieval.</span><span class="th">การดึงข้อมูลเชิงความหมาย (Semantic Search) ที่มีความแม่นยำสูง</span></li>
+                <li><span class="en">Robust prompt engineering mitigating output hallucination.</span><span class="th">การควบคุมพฤติกรรมโมเดลภาษาเพื่อลดข้อผิดพลาดในการตอบคำถาม</span></li>
+            </ul>
+        `
+            },
+            'stationary': {
+                title: 'Stationary E-Commerce',
+                category: 'C# ASP.NET Core MVC',
+                tags: ['C# MVC', 'EF Core', 'SQL Server', 'Full-Stack'],
+                link: 'https://github.com/titapabum/StationaryPJ',
+                content: `
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Challenge</span><span class="th">ขอบเขตและความท้าทาย</span></h3>
+            <p><span class="en">Architecting a comprehensive e-commerce platform from the ground up that requires seamless integration between a user-friendly customer storefront and a complex administrative back-office system for inventory and order management.</span><span class="th">การวางโครงสร้างและพัฒนาระบบร้านค้าออนไลน์แบบครบวงจรตั้งแต่เริ่มต้น ซึ่งต้องการสถาปัตยกรรมระบบที่รองรับทั้งประสบการณ์ใช้งานที่ราบรื่นของลูกค้าหน้าเว็บ และความซับซ้อนของระบบจัดการหลังบ้านสำหรับผู้ดูแล</span></p>
+            
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Solution</span><span class="th">การพัฒนาโครงสร้างระบบ</span></h3>
+            <p><span class="en">Developed a robust full-stack web application using C# ASP.NET Core MVC and Entity Framework Core with MS SQL Server. Applied strict database normalization principles to design a scalable schema. Implemented core business logic including shopping cart sessions, secure order processing workflows, and role-based access control for administrative tasks.</span><span class="th">พัฒนา Full-stack Web Application ด้วย C# ASP.NET Core MVC และ Entity Framework Core ร่วมกับ MS SQL Server โดยประยุกต์ใช้หลักการ Normalization ในการออกแบบฐานข้อมูล พัฒนา Business Logic ที่ครอบคลุมตั้งแต่ระบบตะกร้าสินค้า กระบวนการสั่งซื้อ ไปจนถึงการกำหนดสิทธิ์ผู้ใช้งาน (Role-based access control) และระบบตัดสต็อกสินค้า</span></p>
+
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Key Features</span><span class="th">จุดเด่นของระบบ</span></h3>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><span class="en">Relational database design tailored for e-commerce transactions.</span><span class="th">การออกแบบฐานข้อมูลเชิงสัมพันธ์ที่รองรับธุรกรรมซื้อขาย</span></li>
+                <li><span class="en">Secure session management for shopping carts and user profiles.</span><span class="th">ระบบจัดการ Session สำหรับตะกร้าสินค้าและข้อมูลผู้ใช้งาน</span></li>
+                <li><span class="en">Centralized administrative dashboard for inventory tracking.</span><span class="th">แดชบอร์ดศูนย์กลางสำหรับผู้ดูแลระบบเพื่อติดตามสต็อกสินค้า</span></li>
+            </ul>
+        `
+            },
+            'petshop': {
+                title: 'Pet Shop Platform',
+                category: 'Architecture & Web Dev',
+                tags: ['Architecture', 'RESTful API', 'PostgreSQL', 'Draw.io / Mermaid'],
+                link: 'https://github.com/VarakornSPU/Petshop-Project-CSI400',
+                content: `
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Challenge</span><span class="th">ความท้าทายในการออกแบบ</span></h3>
+            <p><span class="en">Harmonizing multiple distinct business modules—retail product sales, service appointment bookings, and secure online payments—into a single, cohesive platform without compromising system performance or creating a convoluted user flow.</span><span class="th">การผสานรวม Business Modules ที่มีความแตกต่างกันอย่าง การขายสินค้า (E-commerce) และการจองคิวรับบริการ (Booking) ให้เข้ามาอยู่ในแพลตฟอร์มเดียว โดยต้องรักษา User Flow ให้ใช้งานง่ายและไม่ทับซ้อนกัน</span></p>
+            
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Solution</span><span class="th">การวิเคราะห์และดำเนินงาน</span></h3>
+            <p><span class="en">Acted as the lead System Analyst and Full-Stack Developer. Mapped out complex system logic, user journeys, and data flows using Draw.io and Mermaid diagrams to establish a clear architectural blueprint. Developed a scalable backend utilizing PostgreSQL and structured RESTful APIs, secured by JWT authentication for robust session management.</span><span class="th">รับหน้าที่เป็น System Analyst และ Developer หลัก โดยเริ่มจากการวิเคราะห์และออกแบบ Logic ของระบบผ่าน Draw.io และ Mermaid เพื่อทำแผนภาพ Flow และ ER Diagram ให้ชัดเจนก่อนเริ่มเขียนโค้ด จากนั้นพัฒนาระบบ Backend โดยใช้ PostgreSQL และออกแบบ RESTful API ที่มีโครงสร้างชัดเจน ควบคู่กับการทำ JWT Authentication เพื่อความปลอดภัย</span></p>
+
+            <h3 class="text-lg font-bold text-primary mt-4"><span class="en">Key Features</span><span class="th">จุดเด่นของระบบ</span></h3>
+            <ul class="list-disc pl-5 space-y-1">
+                <li><span class="en">Comprehensive logical flow design and ER diagram mapping.</span><span class="th">การวิเคราะห์และเขียนแผนภาพการทำงานของระบบอย่างเป็นขั้นตอน</span></li>
+                <li><span class="en">Scalable RESTful API architecture for multi-service integration.</span><span class="th">สถาปัตยกรรม API ที่รองรับการทำงานของหลายระบบย่อย</span></li>
+                <li><span class="en">Secure user authentication mechanism utilizing JSON Web Tokens.</span><span class="th">ระบบยืนยันตัวตนและการเข้าถึงข้อมูลที่ปลอดภัยด้วย JWT</span></li>
+            </ul>
+        `
+            }
+        };
+
+        function openModal(projectId) {
+            const data = projectsData[projectId];
+            if (!data) return;
+
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalCategory').textContent = data.category;
+            document.getElementById('modalMarkdown').innerHTML = data.content;
+            document.getElementById('modalLink').href = data.link;
+
+            const tagsContainer = document.getElementById('modalTags');
+            tagsContainer.innerHTML = '';
+            data.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'px-3 py-1 bg-blue-100/50 text-blue-700 border border-blue-200 text-xs font-semibold rounded-full';
+                span.textContent = tag;
+                tagsContainer.appendChild(span);
+            });
+
+            const galleryContainer = document.getElementById('modalGallery');
+            galleryContainer.innerHTML = '';
+            if (data.images && data.images.length > 0) {
+                data.images.forEach((imgSrc, index) => {
+                    const imgWrapper = document.createElement('div');
+                    imgWrapper.className = 'flex-shrink-0 w-72 md:w-80 aspect-video snap-center rounded-xl overflow-hidden shadow-sm border border-slate-200/60 bg-slate-100 relative group/img';
+
+                    const img = document.createElement('img');
+                    img.src = imgSrc;
+                    img.alt = `${data.title} preview ${index + 1}`;
+                    img.className = 'w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500';
+
+                    imgWrapper.appendChild(img);
+                    galleryContainer.appendChild(imgWrapper);
+                });
+            }
+
+            document.getElementById('projectModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") { closeModal(); }
+        });
+    </script>
+</body>
+
+</html>

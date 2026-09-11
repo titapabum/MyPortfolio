@@ -1,0 +1,30 @@
+body.lang-en .th {
+    display: none !important;
+}
+
+body.lang-th .en {
+    display: none !important;
+}
+
+body.lang-th {
+    font-family: "Kanit", sans-serif;
+}
+
+body.lang-en {
+    font-family: "Kanit", sans-serif;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
